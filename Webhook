@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+
+    triggers {
+        githubPush()   // This listens for GitHub webhook triggers
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Triggered by GitHub push.'//push
+            }
+        }
+    }
+}
